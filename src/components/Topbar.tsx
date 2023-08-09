@@ -13,6 +13,7 @@ const Topbar = () => {
           <div>+84 918 983 869</div>
         </div>
         <div>
+          test
           <FontAwesomeIcon icon={['fab', 'facebook-f']} className="w-6 h-6" />
           <FontAwesomeIcon icon={['fab', 'twitter']} />
           <FontAwesomeIcon icon={['fab', 'youtube']} />
