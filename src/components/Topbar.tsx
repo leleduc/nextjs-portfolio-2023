@@ -3,6 +3,8 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { library } from "@fortawesome/fontawesome-svg-core";
 import { fab } from "@fortawesome/free-brands-svg-icons";
 import { fas } from "@fortawesome/free-solid-svg-icons";
+import { socialData, contatData } from "@/api/data";
+import Link from "next/link";
 
 const Topbar = () => {
   library.add(fab, fas);
@@ -10,29 +12,28 @@ const Topbar = () => {
     <div className="topbar">
       <div className="flex justify-between items-center">
         <div className="flex justify-start items-center gap-9">
-          <div className="flex justify-between items-center gap-2">
-            <FontAwesomeIcon
-              icon={["fas", "envelope"]}
-              className="icon text-blue-500"
-            />
-            <span className="text-gray-400">leleduc@gmail.com</span>
-          </div>
-          <div className="flex justify-between items-center gap-2">
-            <FontAwesomeIcon
-              icon={["fas", "phone"]}
-              className="icon text-blue-500"
-            />
-            <span className="text-gray-400">+84 918 983 869</span>
-          </div>
+          {contatData.map((item, index) => (
+            <div
+              key={index}
+              className="flex justify-between items-center gap-2"
+            >
+              <FontAwesomeIcon
+                icon={["fas", item.icon]}
+                className="icon text-blue-500"
+              />
+              <span className="text-gray-400">{item.data}</span>
+            </div>
+          ))}
         </div>
         <div className="flex justify-end items-center gap-6">
-          <FontAwesomeIcon
-            icon={["fab", "facebook-f"]}
-            className="icon social"
-          />
-          <FontAwesomeIcon icon={["fab", "twitter"]} className="icon social" />
-          <FontAwesomeIcon icon={["fab", "youtube"]} className="icon social" />
-          <FontAwesomeIcon icon={["fab", "linkedin"]} className="icon social" />
+          {socialData.map((item, index) => (
+            <Link key={index} href={item.url}>
+              <FontAwesomeIcon
+                icon={["fab", item.icon]}
+                className="icon social"
+              />
+            </Link>
+          ))}
         </div>
       </div>
     </div>
