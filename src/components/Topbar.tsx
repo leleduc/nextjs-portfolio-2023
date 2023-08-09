@@ -13,16 +13,16 @@ const Topbar = () => {
           <div className="flex justify-between items-center gap-2">
             <FontAwesomeIcon
               icon={["fas", "envelope"]}
-              className="icon text-blue"
+              className="icon text-blue-500"
             />
-            <span>leleduc@gmail.com</span>
+            <span className="text-gray-400">leleduc@gmail.com</span>
           </div>
           <div className="flex justify-between items-center gap-2">
             <FontAwesomeIcon
               icon={["fas", "phone"]}
-              className="icon text-blue"
+              className="icon text-blue-500"
             />
-            <span>+84 918 983 869</span>
+            <span className="text-gray-400">+84 918 983 869</span>
           </div>
         </div>
         <div className="flex justify-end items-center gap-6">
