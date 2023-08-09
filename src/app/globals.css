@@ -5,3 +5,15 @@
 body {
   @apply bg-[#f4f8fb] w-full m-0 p-0;
 }
+
+.topbar {
+  @apply max-md:hidden container mx-auto text-gray-400 py-[11px];
+}
+
+.topbar .icon {
+  @apply w-4 h-4;
+}
+
+.topbar .social {
+  @apply hover:text-blue transition-colors duration-300 cursor-pointer;
+}
