@@ -6,6 +6,9 @@ body {
   @apply bg-[#f4f8fb] w-full m-0 p-0;
 }
 
+.primaryBtn {
+  @apply py-[16px] px-[24px] bg-blue text-white flex justify-center items-center rounded-lg;
+}
 .topbar {
   @apply max-md:hidden container mx-auto text-gray-400 py-[11px];
 }
