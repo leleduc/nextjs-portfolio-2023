@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=Urbanist:wght@400;500&family=Work+Sans:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400&display=swap');
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -7,16 +8,29 @@ body {
 }
 
 .primaryBtn {
-  @apply py-[16px] px-[24px] bg-blue text-white flex justify-center items-center rounded-lg;
+  @apply py-[16px] px-[24px] bg-blue-500 text-white flex justify-center items-center rounded-lg;
 }
+
+.logo {
+  @apply text-blue-900 font-sans text-4xl font-bold;
+}
+
+.header {
+  @apply w-full;
+}
+
 .topbar {
   @apply max-md:hidden container mx-auto text-gray-400 py-[11px];
 }
 
-.topbar .icon {
+.header .icon {
   @apply w-4 h-4;
 }
 
-.topbar .social {
-  @apply hover:text-blue transition-colors duration-300 cursor-pointer;
+.header .social {
+  @apply hover:text-blue-500 transition-colors duration-300 cursor-pointer;
+}
+
+.mNavbar {
+  @apply fixed md:hidden top-0 bottom-0 left-0 bg-white  flex flex-col z-20 transition-all  duration-300;
 }
