@@ -43,8 +43,11 @@ const Navbar = () => {
           )}
         </div>
         <button className="primaryBtn max-md:hidden">
-          Ok
-          <FontAwesomeIcon icon={['fas', 'arrow-right']} className="w-4 h-4" />
+          My CV
+          <FontAwesomeIcon
+            icon={['fas', 'arrow-right']}
+            className="icon ml-2"
+          />
         </button>
       </div>
       {/* Mobile Menu */}
@@ -94,7 +97,16 @@ const Navbar = () => {
               <span className="text-gray-400">{item.data}</span>
             </div>
           ))}
-          <div className="flex justify-start items-center gap-9"></div>
+
+          <div className="flex justify-start items-center gap-9">
+            <button className="primaryBtn">
+              My CV
+              <FontAwesomeIcon
+                icon={['fas', 'arrow-right']}
+                className="icon ml-2"
+              />
+            </button>
+          </div>
         </div>
       </div>
     </div>

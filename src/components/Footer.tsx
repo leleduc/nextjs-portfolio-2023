@@ -20,7 +20,7 @@ const Footer = () => {
         {/* Logo */}
         <div className="group">
           {/* Logo */}
-          <div className="title text-white">{logoData.title}</div>
+          <div className="title xl:!text-left text-white">{logoData.title}</div>
 
           {/* Slogan */}
           <p className="md:text-left w-[80%] md:w-full mx-auto">
@@ -66,12 +66,12 @@ const Footer = () => {
 
         {/* Infor */}
         <div className="group">
-          <h2 className="title">My Info:</h2>
-          <ul className="itemsWrap">
+          <h2 className="title xl:!text-right">My Info:</h2>
+          <ul className="itemsWrap xl:!items-end ">
             {contactData.map((item, index) => (
               <li
                 key={index}
-                className="flex flex-col md:flex-row md:gap-4 xl:flex-col xl:gap-0 justify-center items-center"
+                className="flex flex-col md:flex-row md:gap-4  xl:flex-row-reverse    justify-center items-center"
               >
                 <FontAwesomeIcon
                   icon={['fas', item.icon]}

@@ -10,6 +10,7 @@ const config: Config = {
     fontFamily: {
       urban: ['Urbanist', 'sans-serif'],
       sans: ['Work Sans', 'sans-serif'],
+      Roboto: ['Roboto Mono', 'monospace'],
     },
     container: {
       center: true,
