@@ -1,10 +1,10 @@
-@import url("https://fonts.googleapis.com/css2?family=Urbanist:wght@400;500&family=Work+Sans:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Urbanist:wght@400;500&family=Work+Sans:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400&display=swap');
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
 body {
-  @apply bg-[#f4f8fb] w-full m-0 p-0;
+  @apply bg-[#f4f8fb] w-full m-0 p-0 font-sans;
 }
 
 .primaryBtn {
@@ -12,11 +12,11 @@ body {
 }
 
 .logo {
-  @apply font-sans text-4xl font-bold;
+  @apply text-4xl font-bold;
 }
 
 .menu {
-  @apply font-sans text-lg text-blue-900 font-normal hover:text-blue-500 transition-colors duration-300;
+  @apply text-lg text-blue-900 font-normal hover:text-blue-500 transition-colors duration-300;
 }
 
 .header {
@@ -40,5 +40,29 @@ body {
 }
 
 .footer {
-  @apply w-full bg-blue-900 text-white;
+  @apply w-full py-[60px] bg-blue-900 text-white;
+}
+
+.footer .title {
+  @apply md:text-left xl:text-center text-2xl font-semibold;
+}
+
+.footer .icon {
+  @apply w-4 h-4;
+}
+
+.footer .social {
+  @apply text-gray-400 bg-[#1D2234] p-2 rounded-full hover:bg-blue-500 hover:text-white transition-colors duration-300 cursor-pointer;
+}
+
+.footer .group {
+  @apply w-full md:w-[45%] xl:w-[20%] flex flex-col  gap-5;
+}
+
+.footer .itemsWrap {
+  @apply flex flex-col justify-center md:justify-start xl:justify-center items-center md:items-start xl:items-center gap-4;
+}
+
+.footer .item {
+  @apply text-sm font-normal hover:text-blue-500 transition-colors duration-300;
 }

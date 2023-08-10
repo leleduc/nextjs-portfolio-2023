@@ -3,7 +3,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { library } from "@fortawesome/fontawesome-svg-core";
 import { fab } from "@fortawesome/free-brands-svg-icons";
 import { fas } from "@fortawesome/free-solid-svg-icons";
-import { socialData, contatData } from "@/api/data";
+import { socialData, contactData } from "@/api/data";
 import Link from "next/link";
 
 const Topbar = () => {
@@ -12,7 +12,7 @@ const Topbar = () => {
     <div className="topbar">
       <div className="flex justify-between items-center">
         <div className="flex justify-start items-center gap-9">
-          {contatData.map((item, index) => (
+          {contactData.map((item, index) => (
             <div
               key={index}
               className="flex justify-between items-center gap-2"

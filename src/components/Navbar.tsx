@@ -1,12 +1,12 @@
-"use client";
-import React from "react";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { library } from "@fortawesome/fontawesome-svg-core";
-import { fas } from "@fortawesome/free-solid-svg-icons";
-import { fab } from "@fortawesome/free-brands-svg-icons";
-import { logoData, menuData, socialData, contatData } from "@/api/data";
+'use client';
+import React from 'react';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { library } from '@fortawesome/fontawesome-svg-core';
+import { fas } from '@fortawesome/free-solid-svg-icons';
+import { fab } from '@fortawesome/free-brands-svg-icons';
+import { logoData, menuData, socialData, contactData } from '@/api/data';
 
-import Link from "next/link";
+import Link from 'next/link';
 
 const Navbar = () => {
   const [menuOpen, setMenuOpen] = React.useState(false);
@@ -37,22 +37,22 @@ const Navbar = () => {
           className="primaryBtn md:hidden cursor-pointer"
         >
           {menuOpen ? (
-            <FontAwesomeIcon className="w-6 h-6" icon={["fas", "x"]} />
+            <FontAwesomeIcon className="w-6 h-6" icon={['fas', 'x']} />
           ) : (
-            <FontAwesomeIcon className="w-6 h-6" icon={["fas", "bars"]} />
+            <FontAwesomeIcon className="w-6 h-6" icon={['fas', 'bars']} />
           )}
         </div>
-        <button className="primaryBtn">
+        <button className="primaryBtn max-md:hidden">
           Ok
-          <FontAwesomeIcon icon={["fas", "arrow-right"]} className="w-4 h-4" />
+          <FontAwesomeIcon icon={['fas', 'arrow-right']} className="w-4 h-4" />
         </button>
       </div>
       {/* Mobile Menu */}
       <div
         className={
           menuOpen
-            ? "mNavbar w-96 max-w-[75%] visibility opacity-100"
-            : "mNavbar w-0 invisible opacity-0"
+            ? 'mNavbar w-96 max-w-[75%] visibility opacity-100'
+            : 'mNavbar w-0 invisible opacity-0'
         }
       >
         {/* Logo */}
@@ -79,16 +79,16 @@ const Navbar = () => {
             {socialData.map((item, index) => (
               <Link key={index} href={item.url}>
                 <FontAwesomeIcon
-                  icon={["fab", item.icon]}
+                  icon={['fab', item.icon]}
                   className="icon social"
                 />
               </Link>
             ))}
           </div>
-          {contatData.map((item, index) => (
+          {contactData.map((item, index) => (
             <div key={index} className="flex justify-start items-center gap-2">
               <FontAwesomeIcon
-                icon={["fas", item.icon]}
+                icon={['fas', item.icon]}
                 className="icon text-blue-500"
               />
               <span className="text-gray-400">{item.data}</span>
